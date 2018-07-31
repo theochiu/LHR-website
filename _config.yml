@@ -1,0 +1,7 @@
+title: Liquid Handling Robotics
+description: 
+show_downloads: true
+google_analytics:
+theme: jekyll-theme-cayman
+port: 3000
+site.github.repository_url: https://github.com/ethanjli/liquid-handling-robotics
