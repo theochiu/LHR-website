@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<h1 id="Chromebook">Chromebook</h1>
+<!-- <h1 id="Chromebook">Chromebook</h1>
 	<ol>
 		<li>Download and install <a target="_blank" href="https://github.com/bromagosa/Snap4Arduino/releases/download/1.2.6/Snap4Arduino_web-chromeos_1.2.6.zip">snap4arduino</a></li>
 
@@ -13,10 +13,39 @@ layout: default
 	<p>It's important to note that <b>you must redownload</b> the 
 		<a target="_blank" href="https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/ethanjli/liquid-handling-robotics/tree/master/examples"> 
 		examples library</a> in order to get updates to software.</p>
+ -->
+
+<!-- TABLE OF CONTENTS -->
+<div>
+	<p >Contents</p>
+	<ul>
+		<li>
+			<a href="#installation">Installation</a>
+			<ul>
+				<li><a href="#windows/mac">Windows/Mac</a></li>
+			</ul>
+		</li>
+
+		<li>
+			<a href="#operation">Operation</a>
+			<ul>
+				<li><a href="#incremental moves">Incremental Moves</a></li>
+				<li><a href="#preset cuvette positions">Preset Cuvette Positions</a></li>
+				<li><a href="#serial dilution">Serial Dilution</a></li>
+			</ul>
+		</li>
+
+		<li>
+			<a href="#pid tuning">PID Tuning</a>
+		</li>
+
+	</ul>
+
+</div>
 
 
-
-<h1 id="Other">Windows/Mac</h1>
+<h1 id="installation">Installation</h1>
+<h2 id="windows/mac">Windows/Mac</h2>
 	<ol>
 		<li>Download and install <a target="_blank" href="http://snap4arduino.rocks/#download">snap4arduino</a></li>
 		<li>Download and install <a target="_blank" href="https://git-scm.com/downloads">git</a></li>
@@ -24,3 +53,51 @@ layout: default
 		<li>Import files and get started!</li>
 	</ol>
 	<p>It's important to note that before starting subsequent times, you <b>must pull from git gui</b></p>
+
+<h1 id="operation">Operation</h1>
+	<p>
+		Here are some sample programs that can be run inside a snap4arduino environment.
+		The files and sample code for snap4arduino are in 
+		<a target="_blank" href="https://github.com/ethanjli/liquid-handling-robotics/tree/master/s4a/Robot">/s4a/robot</a>
+	</p>
+
+<h2 id="incremental moves" >Incremental Moves</h2>
+	<p>
+		Incremental moves allows you to use the keyboard of the computer to move the liquid handling robot. The 
+		left and right arrow keys move the dispenser assembly left and right on the track. The up and down
+		arrow keys move the syringe up and down. The I and K keys move the plunger (mechanism that sucks and releases
+		liquid) up and down. 
+	</p>
+
+<h2 id="preset cuvette positions" >Preset Cuvette Positions</h2>
+	<p>
+		This program is very usefull since it has shortcuts to the cuvette locations and well locations. Simply line
+		up the bottom rack such that when the syringe is pushed farthest out it lines up over the corresponding hole
+		on the rack. After this calibration the keys 1-9 will take the syringe to the location of the corresponding 
+		cuvette	while the letters q-u on a querty keyboard should take the syringe to the location of a well. This makes handling 
+		liquids easier by eliminating the need to manually move the top assembly using 
+		<a href="#incremental moves">incremental moves</a>.
+	</p>
+
+
+<h2 id="serial dilution">Serial Dilution</h2>
+
+
+
+<h1 id="pid tuning">PID tuning</h1>
+	<p>
+		The LHR uses a PID system that feedsback the error of the motors moving the system. There are some calibrations
+		required in order for the system to work properly. Certain parameters such as need to be changed in order to optimize performance. 
+		<h3>Parameters</h3>
+		<ul>
+			<li>derivative</li>
+			<li>gain</li>
+			<li>lorem</li>
+			<li>ipsum</li>
+		</ul>
+	</p>
+	<br>
+	<p>
+		Run <a href="#">this</a> python command script to initiate PID calibration
+	</p>
+
